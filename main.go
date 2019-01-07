@@ -7,10 +7,14 @@ import (
 	"strings"
 	"time"
 
+	"github.com/ccding/go-stun/stun"
 	"github.com/immofon/ebus"
 )
 
 func main() {
+	nat, host, err := stun.NewClient().Discover()
+	fmt.Println(nat, host, err)
+
 	fmt.Println("hello ci")
 
 	defer func() {
