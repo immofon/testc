@@ -7,5 +7,4 @@ before_install:
   - go get -v -t ./...
 
 script:
-  - go install
-  - wnsq server
+  - go run main.go client.go server.go serve
