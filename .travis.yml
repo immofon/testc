@@ -3,12 +3,9 @@ language: go
 go:
   - 1.11.x
 
-env:
-  - AMQP_URL=amqp://guest:guest@127.0.0.1:5672/
-
 before_install:
   - go get -v -t ./...
 
 script:
-  - go run main.go
-
+  - go build
+  - ./wnsq server
