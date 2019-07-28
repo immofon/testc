@@ -7,4 +7,4 @@ before_install:
   - go get -v -t ./...
 
 script:
-  - go run main.go client.go server.go serve
+  - go run main.go client.go server.go server
